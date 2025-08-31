@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0B5ED7" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/icon-192.png" />
+  <title>DayEase UAE</title>
+  <meta name="description" content="Offline helper for UAE daily tasks: parking, Nol, Salik, addresses, tipping, onboarding." />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-title">
+      <span>DayEase UAE</span>
+      <small id="saved-counter" aria-live="polite"></small>
+    </div>
+    <div class="lang-toggle">
+      <button id="lang-en" class="pill" aria-pressed="true">EN</button>
+      <button id="lang-ar" class="pill">العربية</button>
+    </div>
+  </header>
+
+  <nav class="tabbar" role="navigation" aria-label="Primary">
+    <button class="tab" data-route="#/parking">🚗 <span data-i18n="tab_parking">Parking</span></button>
+    <button class="tab" data-route="#/nol">🚌 <span data-i18n="tab_nol">Nol Guard</span></button>
+    <button class="tab" data-route="#/salik">🛣️ <span data-i18n="tab_salik">Salik</span></button>
+    <button class="tab" data-route="#/address">📍 <span data-i18n="tab_address">Address</span></button>
+    <button class="tab" data-route="#/tip">💚 <span data-i18n="tab_tip">Tip</span></button>
+    <button class="tab" data-route="#/onboarding">🧭 <span data-i18n="tab_onboarding">Onboard</span></button>
+  </nav>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="app-footer">
+    <button id="installBtn" class="btn small" hidden>Install App</button>
+    <span class="muted">v0.1 MVP</span>
+  </footer>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
+

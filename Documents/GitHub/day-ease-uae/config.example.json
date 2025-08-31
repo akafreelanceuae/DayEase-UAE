@@ -1,0 +1,11 @@
+{
+  "rtaWhatsApp": "+971588009090",
+  "rtaSms": "7275",
+  "plates": {
+    "DXB": { "name": "Dubai", "format": "DXB {code} {num}" },
+    "SHJ": { "name": "Sharjah", "format": "SHJ {code} {num}" },
+    "AJM": { "name": "Ajman", "format": "AJM {code} {num}" },
+    "AUH": { "name": "Abu Dhabi", "format": "AUH {code} {num}" }
+  }
+}
+
