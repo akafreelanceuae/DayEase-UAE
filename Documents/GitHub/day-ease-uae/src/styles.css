@@ -1,0 +1,70 @@
+:root{ --bg:#0b0f14; --card:#121821; --muted:#8aa0b8; --txt:#e6eef7; --accent:#5b8cff; --accent-2:#7a5bff; --ok:#11b57f; --warn:#f0a71a; --bad:#ff5a64; --glass:rgba(17,24,39,.55); --border:#1c2940; }
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Arial; color:var(--txt); background:
+  radial-gradient(1300px 700px at 80% -10%, #142a46, transparent 60%),
+  radial-gradient(800px 500px at -10% 10%, #1a1446, transparent 50%),
+  linear-gradient(180deg,#0b0f14,#0e1620 40%,#0b0f14 100%)}
+.app-header{display:flex; justify-content:space-between; align-items:center; padding:12px 16px; position:sticky; top:0; background:var(--glass); backdrop-filter:saturate(140%) blur(10px); border-bottom:1px solid var(--border); z-index:3}
+.app-title{display:flex; flex-direction:column; gap:2px; font-weight:800}
+.app-title small{color:var(--muted); font-weight:500}
+.lang-toggle{display:flex; gap:8px}
+.pill{background:#0f1722; color:var(--txt); border:1px solid #203041; padding:6px 10px; border-radius:999px}
+.pill.active{background:var(--accent); border-color:var(--accent)}
+.tabbar{display:grid; grid-template-columns: repeat(6,1fr); gap:6px; padding:8px; position:fixed; bottom:0; left:0; right:0; background:var(--glass); backdrop-filter:blur(10px); border-top:1px solid var(--border); z-index:5}
+.tab{display:flex; flex-direction:column; gap:4px; align-items:center; text-decoration:none; color:var(--txt); background:transparent; border:0; padding:8px 4px; border-radius:10px; font-size:12px}
+.tab .icon{font-size:18px}
+.tab.active{background:rgba(255,255,255,.04); outline:1px solid var(--border)}
+.app-main{padding:14px; padding-bottom:84px; display:grid; gap:12px; max-width:960px; margin:8px auto}
+.card{background:linear-gradient(180deg, rgba(18,24,33,.9), rgba(16,22,31,.9)); border:1px solid var(--border); border-radius:16px; padding:16px; display:grid; gap:12px; box-shadow: 0 10px 30px rgba(0,0,0,.25)}
+.row{display:flex; gap:8px; flex-wrap:wrap}
+.field{display:grid; gap:6px; flex:1}
+label{color:#cfe0f2; font-size:14px}
+input, select, textarea{width:100%; padding:12px; border-radius:10px; border:1px solid #26374c; background:#0f1620; color:var(--txt)}
+textarea{min-height:88px; resize:vertical}
+.btn{background:linear-gradient(135deg, var(--accent), var(--accent-2)); border:none; color:white; padding:12px 14px; border-radius:12px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; box-shadow: 0 6px 14px rgba(91,140,255,.25)}
+.btn.secondary{background:#152236}
+.btn.warn{background:var(--warn); color:#1b1607}
+.btn.ok{background:var(--ok)}
+.btn.small{padding:8px 10px; font-size:13px}
+.muted{color:var(--muted)}
+.kpi{display:flex; gap:10px; align-items:center}
+.kpi .badge{background:#0f2032; border:1px solid #1d3146; border-radius:8px; padding:8px 10px; font-weight:700}
+.list{display:grid; gap:6px}
+.list .item{display:flex; justify-content:space-between; align-items:center; padding:8px 10px; background:#0e1724; border:1px solid #1a2b3f; border-radius:10px}
+.note{background:#0f1b2a; border:1px dashed #28435f; border-radius:10px; padding:10px; color:#bcd0e6}
+.app-footer{position:fixed; bottom:0; left:0; right:0; display:flex; justify-content:space-between; align-items:center; padding:8px 12px; background:rgba(11,15,20,.8); border-top:1px solid #1c2836}
+.qr{background:white; border-radius:10px; padding:8px; display:inline-block}
+
+/* Nol Guard Pro visuals */
+.balance-section{display:flex; flex-direction:column; gap:4px; margin-bottom:8px}
+.balance-amount{font-size:28px; font-weight:800}
+.balance-label{color:var(--muted); font-size:12px}
+.card-details{display:grid; gap:4px}
+.nfc-section{display:flex; gap:10px; align-items:center; margin-top:6px}
+.quick-amounts{display:flex; gap:8px; flex-wrap:wrap; margin-top:6px}
+.spending-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+.spending-card{background:#0f2032; border:1px solid #1d3146; border-radius:10px; padding:10px; text-align:center}
+.spend-title{color:var(--muted); font-size:12px}
+.spend-value{font-weight:800; font-size:18px}
+.legacy-sync h3{margin:0}
+
+/* Modern extras */
+.chip{background:#0f2032; color:#d9e6f5; border:1px solid #28456a; padding:10px 12px; border-radius:999px; font-weight:700}
+.fab{position:fixed; right:16px; bottom:96px; width:56px; height:56px; border-radius:999px; background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px; box-shadow:0 12px 30px rgba(90,120,255,.35); border:0}
+
+/* Horizontal card scroller */
+.hscroll{display:flex; gap:10px; overflow:auto; padding:6px 2px}
+.card-chip{min-width:220px; background:linear-gradient(135deg,#15243a,#1a163f); border:1px solid var(--border); border-radius:14px; padding:12px}
+.badge{display:inline-block; font-size:11px; padding:2px 6px; border-radius:6px; background:#17314c; color:#b9d8ff}
+.badge.warn{background:#3b2a0a; color:#ffd28a}
+.badge.error{background:#3b1214; color:#ff9aa0}
+
+/* Modal */
+.modal{position:fixed; inset:0; background:rgba(0,0,0,.5); display:flex; align-items:flex-end; justify-content:center; z-index:50}
+.sheet{background:var(--card); border:1px solid var(--border); border-radius:16px 16px 0 0; padding:16px; width:100%; max-width:720px}
+.sheet h3{margin-top:0}
+
+/* Tiny bar chart */
+.bars{display:flex; gap:6px; align-items:flex-end; height:64px}
+.bar{width:10px; background:#233a59; border:1px solid #2e4b72; border-radius:4px}

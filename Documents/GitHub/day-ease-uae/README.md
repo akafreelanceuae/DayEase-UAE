@@ -5,18 +5,21 @@ Overview
 - Bilingual Arabic/English toggle, offline caching, localStorage state.
 - Modules: Parking Genius, Nol Second-Tap Guard, Salik Shield, Address & Delivery Fix, Clean Cashless Tipping, Onboarding Concierge.
 
-Run locally
-1) From this folder run a static server (service worker needs http/localhost):
-   - Python: python3 -m http.server 5173
-   - Node (if installed): npx serve -l 5173
-2) Open http://localhost:5173
+Run locally (React + Vite)
+1) Install deps: `npm install`
+2) Start dev server: `npm run dev`
+3) Open `http://localhost:5173`
 
-Files
-- index.html — app shell and navigation
-- style.css — accessible, mobile-first styles
-- app.js — SPA router, i18n, and all modules
-- sw.js — service worker for offline cache
-- manifest.webmanifest — PWA manifest
+Files (React)
+- index.html — Vite HTML entry
+- src/main.jsx — React bootstrap + router + SW
+- src/App.jsx — layout shell
+- src/i18n.js — Arabic/English strings
+- src/pages/*.jsx — Parking, Nol, Salik, Address, Tip, Onboarding
+- src/components/*.jsx — header, tabs, helpers
+- src/styles.css — modern dark UI
+- public/manifest.webmanifest — PWA manifest
+- public/sw.js — service worker for offline cache
 
 Data & deep links (stubs)
 - WhatsApp Mahboub (Dubai): 971588009090
@@ -24,6 +27,12 @@ Data & deep links (stubs)
 - RTA/Nol pages linked in Nol Guard
 - Salik Top-up and FAQ linked in Salik Shield
 - what3words link format used when user provides words
+
+Deploy on Vercel
+- Import repo in Vercel (Framework: Vite)
+- Build command: `npm run build`
+- Output: `dist`
+- `vercel.json` keeps SPA rewrites and `sw.js` headers
 
 Notes & limitations
 - Parking renewal reminder uses Notifications API while app is active. Background scheduled notifications without a server are not guaranteed on the web.
@@ -37,4 +46,3 @@ Test scenarios mapping
 - Share delivery card → Address: get location, optional what3words, bilingual note, share via system share.
 - Staff tip QR → Tip: enter name/note, generate link & QR, payer opens link, selects amount and pays in bank app in under 10s.
 - Tourist onboarding → Onboarding: eSIM 24h flow, bank approvals checklist and links.
-
